@@ -5,6 +5,8 @@ import java.io.File;
 import org.deeplearning4j.models.embeddings.loader.WordVectorSerializer;
 import org.deeplearning4j.models.embeddings.wordvectors.WordVectors;
 
+import word2vec.util.VectorUtils;
+
 public class UseVectorSpaceDrWho {
 
 	
@@ -13,35 +15,35 @@ public class UseVectorSpaceDrWho {
 
 		WordVectors vec = WordVectorSerializer.loadTxtVectors(new File("/Users/craigtrim/Desktop/drwho/vec/drwho005.vec"));
 
-		Utils.s(vec, "alpha", "dalek");
-		Utils.s(vec, "blah blah", "dalek");
-		Utils.s(vec, "doctor", "dalek");
-		Utils.s(vec, "dr-who", "dalek");
-		Utils.s(vec, "doctor", "master");
-		Utils.s(vec, "doctor", "davros");
-		Utils.s(vec, "dalek", "davros");
-		Utils.s(vec, "doctor", "time lord");
-		Utils.s(vec, "tardis", "doctor");
-		Utils.s(vec, "tardis", "dr-who");
-		Utils.s(vec, "dr-who", "doctor");
-		Utils.s(vec, "strax", "sontaran");
-		Utils.s(vec, "skaro", "dalek");
-		Utils.s(vec, "skaro", "davros");
-		Utils.s(vec, "k9", "drwho");
+		VectorUtils.s(vec, "alpha", "dalek");
+		VectorUtils.s(vec, "blah blah", "dalek");
+		VectorUtils.s(vec, "doctor", "dalek");
+		VectorUtils.s(vec, "dr-who", "dalek");
+		VectorUtils.s(vec, "doctor", "master");
+		VectorUtils.s(vec, "doctor", "davros");
+		VectorUtils.s(vec, "dalek", "davros");
+		VectorUtils.s(vec, "doctor", "time lord");
+		VectorUtils.s(vec, "tardis", "doctor");
+		VectorUtils.s(vec, "tardis", "dr-who");
+		VectorUtils.s(vec, "dr-who", "doctor");
+		VectorUtils.s(vec, "strax", "sontaran");
+		VectorUtils.s(vec, "skaro", "dalek");
+		VectorUtils.s(vec, "skaro", "davros");
+		VectorUtils.s(vec, "k9", "drwho");
 
-		Utils.nearest(vec, "dalek", 10);
-		Utils.nearest(vec, "cyberman", 10);
-		Utils.nearest(vec, "sontaran", 10);
-		Utils.nearest(vec, "davros", 10);
-		Utils.nearest(vec, "tardis", 10);
-		Utils.nearest(vec, "skaro", 10);
-		Utils.nearest(vec, "k9", 10);
+		VectorUtils.nearest(vec, "dalek", 10);
+		VectorUtils.nearest(vec, "cyberman", 10);
+		VectorUtils.nearest(vec, "sontaran", 10);
+		VectorUtils.nearest(vec, "davros", 10);
+		VectorUtils.nearest(vec, "tardis", 10);
+		VectorUtils.nearest(vec, "skaro", 10);
+		VectorUtils.nearest(vec, "k9", 10);
 		
 		// king1 - queen3 + woman2 = man
-		Utils.nearest(vec, "dr-who", "dalek", "tardis", 10);
-		Utils.nearest(vec, "dr-who", "dalek", "k9", 10);
-		Utils.nearest(vec, "dr-who", "dalek", "clara", 10);
-		Utils.nearest(vec, "skaro", "earth", "dalek", 10);
+		VectorUtils.nearest(vec, "dr-who", "dalek", "tardis", 10);
+		VectorUtils.nearest(vec, "dr-who", "dalek", "k9", 10);
+		VectorUtils.nearest(vec, "dr-who", "dalek", "clara", 10);
+		VectorUtils.nearest(vec, "skaro", "earth", "dalek", 10);
 		
 		//Utils.nearest(vec, Arrays.asList("doctor), list2, n);
 		

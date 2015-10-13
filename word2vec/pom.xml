@@ -8,9 +8,9 @@
 	<packaging>jar</packaging>
 
 	<url />
-	<name>eBear Commons Solr</name>
+	<name>SWTK ML Word2Vec</name>
 	<inceptionYear>2015</inceptionYear>
-	<description>eBear Solr Common Code</description>
+	<description>Word2Vec</description>
 
 	<build>
 		<plugins>

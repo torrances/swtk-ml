@@ -7,6 +7,8 @@ import java.util.Collection;
 import org.deeplearning4j.models.embeddings.loader.WordVectorSerializer;
 import org.deeplearning4j.models.word2vec.Word2Vec;
 
+import word2vec.util.VectorUtils;
+
 public class UseGoogleVectorSpace {
 
 	public static void main(String... args) throws Throwable {
@@ -25,10 +27,10 @@ public class UseGoogleVectorSpace {
 		for (double d : wv) sb.append(d + " ");
 		System.err.println(sb.toString().trim());
 		
-		System.err.println(Utils.toString(vec.wordsNearest("dalek", 10)));
+		System.err.println(VectorUtils.toString(vec.wordsNearest("dalek", 10)));
 		System.err.println(vec.similarity("day", "night"));
 		System.err.println(vec.similarity("sweden", "norway"));
 		
-		Utils.nearest(vec, "dalek", 10);
+		VectorUtils.nearest(vec, "dalek", 10);
 	}
 }

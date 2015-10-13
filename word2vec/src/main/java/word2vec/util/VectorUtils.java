@@ -1,4 +1,4 @@
-package word2vec;
+package word2vec.util;
 
 import java.util.Arrays;
 import java.util.Collection;
@@ -6,11 +6,11 @@ import java.util.Iterator;
 
 import org.deeplearning4j.models.embeddings.wordvectors.WordVectors;
 
-public class Utils {
+public class VectorUtils {
 
 	public static void nearest(WordVectors vec, String term, int n) {
 		Collection<String> list = vec.wordsNearest(term, n);
-		System.err.println("nearest-" + n + ":" + term + " = (" + Utils.toString(list) + ")");
+		System.err.println("nearest-" + n + ":" + term + " = (" + VectorUtils.toString(list) + ")");
 	}
 
 	public static void nearest(WordVectors vec, String t1, String t2, String t3, int n) {

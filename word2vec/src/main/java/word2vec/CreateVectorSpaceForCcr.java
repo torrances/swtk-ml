@@ -54,6 +54,6 @@ public class CreateVectorSpaceForCcr {
 				.lookupTable(table).stopWords(new ArrayList<String>()).vocabCache(cache).seed(42).windowSize(5).iterate(iter).tokenizerFactory(tokenizer).build();
 
 		vec.fit();
-		WordVectorSerializer.writeWordVectors(vec, "/Users/craigtrim/Desktop/ccr.vec");
+		WordVectorSerializer.writeWordVectors(vec, "/Users/craigtrim/Desktop/ccr001.vec");
 	}
 }
