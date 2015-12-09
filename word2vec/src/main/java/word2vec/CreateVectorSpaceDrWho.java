@@ -3,6 +3,7 @@ package word2vec;
 import java.io.File;
 import java.util.ArrayList;
 
+import org.apache.uima.pear.util.FileUtil;
 import org.deeplearning4j.models.embeddings.WeightLookupTable;
 import org.deeplearning4j.models.embeddings.inmemory.InMemoryLookupTable;
 import org.deeplearning4j.models.embeddings.loader.WordVectorSerializer;
@@ -20,7 +21,7 @@ public class CreateVectorSpaceDrWho {
 
 	public static void main(String... args) throws Throwable {
 
-		SentenceIterator iter = new LineSentenceIterator(new File("/Users/craigtrim/Desktop/drwho/dat/03/drwho004.dat"));
+		SentenceIterator iter = new LineSentenceIterator(new File("../word2vec/src/main/resources/dat/drwho004.dat"));
 		iter.setPreProcessor(new SentencePreProcessor() {
 			private static final long serialVersionUID = -2987136190084900667L;
 
@@ -54,6 +55,13 @@ public class CreateVectorSpaceDrWho {
 				.lookupTable(table).stopWords(new ArrayList<String>()).vocabCache(cache).seed(42).windowSize(5).iterate(iter).tokenizerFactory(tokenizer).build();
 
 		vec.fit();
-		WordVectorSerializer.writeWordVectors(vec, "/Users/craigtrim/Desktop/drwho/vec/drwho005.vec");
+
+		File outDir = new File(BASE_OUT);
+		if (outDir.exists()) FileUtil.deleteDirectory(outDir);
+		if (!outDir.exists()) outDir.mkdirs();
+
+		WordVectorSerializer.writeWordVectors(vec, outDir.getAbsolutePath() + "/drwho005.vec");
 	}
+
+	public static final String BASE_OUT = "/Users/craigtrim/Desktop/drwho/vec/";
 }
