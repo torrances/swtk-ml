@@ -38,8 +38,13 @@ public class CreateVectorSpaceDrWho {
 			public String preProcess(String token) {
 				token = token.toLowerCase();
 				String base = preProcessor.preProcess(token);
+
+				if ("exterminat".equals(base)) base = "exterminate";
+				if ("thals".equals(base)) base = "thal";
+				if ("intruders".equals(base)) base = "intruder";
+				if ("cddd".equals(base)) return null;
+
 				base = base.replaceAll("\\d", "d");
-				if (base.endsWith("ly") || base.endsWith("ing")) System.out.println();
 				return base;
 			}
 		});

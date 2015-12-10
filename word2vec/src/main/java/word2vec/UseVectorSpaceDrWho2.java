@@ -13,8 +13,10 @@ public class UseVectorSpaceDrWho2 {
 
 		WordVectors vec = WordVectorSerializer.loadTxtVectors(new File("/Users/craigtrim/Desktop/drwho/vec/drwho005.vec"));
 
-		VectorUtils.nearest(vec, "dalek", 10);
-		VectorUtils.nearest(vec, "cyberman", 10);
+		VectorUtils.nearest(vec, "skaro", 10);
+		VectorUtils.s(vec, "skaro", "dalek");
+		
+		// VectorUtils.nearest(vec, "cyberman", 10);
 
 	}
 }

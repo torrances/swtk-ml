@@ -1,0 +1,39 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>swtk-ml-w2v</groupId>
+	<artifactId>swtk-ml-w2v</artifactId>
+	<version>1.0.0</version>
+	<packaging>pom</packaging>
+
+	<url />
+	<name>Moose Smoke Builder</name>
+	<inceptionYear>2015</inceptionYear>
+	<description>Moose Smoke</description>
+
+	<modules>
+		<module>../swtk-w2v-core</module>
+		<module>../swtk-w2v-drwho</module>
+	</modules>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.swtk.ml.w2v.core</groupId>
+			<artifactId>swtk-w2v-core</artifactId>
+			<version>1.0.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.swtk.ml.w2v.drwho</groupId>
+			<artifactId>swtk-w2v-drwho</artifactId>
+			<version>1.0.0</version>
+		</dependency>
+	</dependencies>
+
+</project>
+  
