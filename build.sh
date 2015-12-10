@@ -1,1 +1,3 @@
-pushd word2vec && mvn clean install && popd
+pushd 	swtk-w2v-build && \
+		mvn clean install && \
+		popd

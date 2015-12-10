@@ -8,9 +8,9 @@
 	<packaging>pom</packaging>
 
 	<url />
-	<name>Moose Smoke Builder</name>
+	<name>SWTK Word2Vec Build</name>
 	<inceptionYear>2015</inceptionYear>
-	<description>Moose Smoke</description>
+	<description>SWTK Word2Vec Build</description>
 
 	<modules>
 		<module>../swtk-w2v-core</module>
