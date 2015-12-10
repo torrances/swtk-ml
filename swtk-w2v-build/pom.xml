@@ -15,6 +15,9 @@
 	<modules>
 		<module>../swtk-w2v-core</module>
 		<module>../swtk-w2v-drwho</module>
+		<module>../swtk-w2v-googlenewsvectors</module>
+		<module>../swtk-w2v-citi</module>
+		<module>../swtk-w2v-ccr</module>
 	</modules>
 
 	<properties>
@@ -31,6 +34,21 @@
 		<dependency>
 			<groupId>org.swtk.ml.w2v.drwho</groupId>
 			<artifactId>swtk-w2v-drwho</artifactId>
+			<version>1.0.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.swtk.ml.w2v.gnv</groupId>
+			<artifactId>swtk-w2v-googlenewsvectors</artifactId>
+			<version>1.0.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.swtk.ml.w2v.citi</groupId>
+			<artifactId>swtk-w2v-citi</artifactId>
+			<version>1.0.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.swtk.ml.w2v.ccr</groupId>
+			<artifactId>swtk-w2v-ccr</artifactId>
 			<version>1.0.0</version>
 		</dependency>
 	</dependencies>

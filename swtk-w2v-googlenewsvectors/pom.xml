@@ -2,15 +2,18 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>org.swtk.ml.w2v.core</groupId>
-	<artifactId>swtk-w2v-core</artifactId>
+	<groupId>org.swtk.ml.w2v.gnv</groupId>
+	<artifactId>swtk-w2v-googlenewsvectors</artifactId>
 	<version>1.0.0</version>
 	<packaging>jar</packaging>
 
 	<url />
-	<name>SWTK Word2Vec Core</name>
+	<name>SWTK Word2Vec Google News Vectors</name>
 	<inceptionYear>2015</inceptionYear>
-	<description>SWTK Word2Vec Core</description>
+	<description>
+		SWTK Word2Vec
+		for Google News Vectors
+	</description>
 
 	<build>
 		<plugins>
@@ -30,31 +33,13 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-		<nd4j.version>0.4-rc3.4</nd4j.version>
-		<dl4j.version>0.4-rc3.3</dl4j.version>
 	</properties>
 
 	<dependencies>
 		<dependency>
-			<groupId>trimc-commons</groupId>
-			<artifactId>trimc-commons</artifactId>
+			<groupId>org.swtk.ml.w2v.core</groupId>
+			<artifactId>swtk-w2v-core</artifactId>
 			<version>1.0.0</version>
-			<type>pom</type>
-		</dependency>
-		<dependency>
-			<groupId>org.deeplearning4j</groupId>
-			<artifactId>deeplearning4j-ui</artifactId>
-			<version>${dl4j.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.deeplearning4j</groupId>
-			<artifactId>deeplearning4j-nlp</artifactId>
-			<version>${dl4j.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.nd4j</groupId>
-			<artifactId>nd4j-jblas</artifactId>
-			<version>${nd4j.version}</version>
 		</dependency>
 	</dependencies>
 
