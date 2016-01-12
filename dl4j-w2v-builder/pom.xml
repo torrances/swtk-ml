@@ -1,0 +1,62 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>swtk-dl4j</groupId>
+	<artifactId>swtk-dl4j</artifactId>
+	<version>1.0.0</version>
+	<packaging>pom</packaging>
+
+	<url />
+	<name>SWTK Word2Vec Build</name>
+	<inceptionYear>2015</inceptionYear>
+	<description>SWTK Word2Vec Build</description>
+
+	<modules>
+		<module>../dl4j-w2v-core</module>
+		<module>../dl4j-w2v-drwho</module>
+		<module>../dl4j-w2v-gnv</module>
+		<module>../dl4j-w2v-ccr</module>
+		<module>../dl4j-w2v-generic</module>
+	</modules>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.swtk.ml.w2v.core</groupId>
+			<artifactId>swtk-w2v-core</artifactId>
+			<version>1.0.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.swtk.ml.w2v.drwho</groupId>
+			<artifactId>swtk-w2v-drwho</artifactId>
+			<version>1.0.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.swtk.ml.w2v.gnv</groupId>
+			<artifactId>swtk-w2v-googlenewsvectors</artifactId>
+			<version>1.0.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.swtk.ml.w2v.citi</groupId>
+			<artifactId>swtk-w2v-citi</artifactId>
+			<version>1.0.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.swtk.ml.w2v.ccr</groupId>
+			<artifactId>swtk-w2v-ccr</artifactId>
+			<version>1.0.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.swtk.dl4j.w2v.generic</groupId>
+			<artifactId>dl4j-w2v-generic</artifactId>
+			<version>1.0.0</version>
+		</dependency>
+	</dependencies>
+
+</project>
+  
