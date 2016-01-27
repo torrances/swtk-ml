@@ -12,7 +12,7 @@ public class UseGoogleVectorSpace {
 
 	public static void main(String... args) throws Throwable {
 
-		File gModel = new File("/Users/craigtrim/Downloads/GoogleNews-vectors-negative300.bin.gz");
+		File gModel = new File("/Users/craigtrim/data/Data/word2vec/input/gnv/GoogleNews-vectors-negative300.bin.gz");
 		Word2Vec vec = WordVectorSerializer.loadGoogleModel(gModel, true);
 
 		Collection<String> kingList = vec.wordsNearest(Arrays.asList("king", "woman"), Arrays.asList("queen"), 10);
@@ -21,15 +21,16 @@ public class UseGoogleVectorSpace {
 
 		//INDArray wordVector = vec.getWordVectorMatrix("king");
 		double[] wv = vec.getWordVector("king");
-		
+
 		StringBuilder sb = new StringBuilder();
-		for (double d : wv) sb.append(d + " ");
+		for (double d : wv)
+			sb.append(d + " ");
 		System.err.println(sb.toString().trim());
-		
+
 		System.err.println(VectorUtils.toString(vec.wordsNearest("dalek", 10)));
 		System.err.println(vec.similarity("day", "night"));
 		System.err.println(vec.similarity("sweden", "norway"));
-		
+
 		VectorUtils.nearest(vec, "dalek", 10);
 	}
 }
